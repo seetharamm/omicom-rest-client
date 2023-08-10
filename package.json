@@ -1,21 +1,40 @@
 {
-  "name": "electron-react-demo",
+  "name": "omicom",
   "version": "0.1.0",
   "private": true,
+  "main": "./src/main.js",
   "dependencies": {
+    "@codemirror/lang-javascript": "^6.1.6",
+    "@emotion/react": "^11.10.6",
+    "@emotion/styled": "^11.10.6",
+    "@fortawesome/fontawesome-svg-core": "^6.4.0",
+    "@mui/icons-material": "^5.11.16",
+    "@mui/lab": "^5.0.0-alpha.127",
+    "@mui/material": "^5.11.16",
+    "@mui/styled-engine-sc": "^5.11.11",
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
+    "@uiw/react-codemirror": "^4.19.16",
+    "i": "^0.3.7",
+    "json-beautify": "^1.1.1",
+    "node-fetch": "^3.3.1",
+    "npm": "^9.6.4",
+    "path": "^0.12.7",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-scripts": "5.0.1",
+    "styled-components": "^5.3.9",
+    "vkbeautify": "^0.99.1",
     "web-vitals": "^2.1.4"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "dev": "concurrently -k \"BROWSER=none npm start\" \"npm:electron\"",
+    "electron": "electron ."
   },
   "eslintConfig": {
     "extends": [
@@ -34,5 +53,11 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "concurrently": "^8.0.1",
+    "electron": "^24.0.0",
+    "electron-is-dev": "^2.0.0",
+    "wait-on": "^7.0.1"
   }
 }
